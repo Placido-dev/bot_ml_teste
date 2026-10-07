@@ -18,8 +18,8 @@ def buscar_ofertas_ml(desconto_minimo=20):
                 const cards = document.querySelectorAll('[class*="poly-card"], [class*="poly-component"]');
                 return Array.from(cards).map(card => {
                     const titulo_el = card.querySelector('.poly-component__title');
-                    const fracao = card.querySelector('.andes-money-amount__fraction');
-                    const centavos = card.querySelector('.andes-money-amount__cents');
+                    const fracao = card.querySelector('.poly-price__current .andes-money-amount__fraction');
+                    const centavos = card.querySelector('.poly-price__current .andes-money-amount__cents');
                     const desconto_el = card.querySelector('.polylabel-pill');
 
                     const titulo = titulo_el ? titulo_el.innerText.trim() : null;
